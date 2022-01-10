@@ -24,14 +24,26 @@ public class Controller {
         String sort = params.getOrDefault("sort", "");
         JSONObject result = handler.GetUsers(min, max, offset, limit, sort);
         String resString = result.toString();
-        System.out.println(resString);
+//        System.out.println(resString);
         return resString;
     }
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    public String PostUpload() {
+    public String PostUpload(@RequestParam Map<String, String> params) throws JSONException {
         System.out.println("Greetings from upload path");
-        return "";
+        String filename = params.getOrDefault("file", "");
+        JSONObject result = new JSONObject();
+        if (filename.equals("")) {
+            result.put("success", 0);
+            return result.toString();
+        }
+        boolean succ = handler.Update(filename);
+        if (succ) {
+            result.put("success", 1);
+        } else {
+            result.put("success", 0);
+        }
+        return result.toString();
     }
 
 }

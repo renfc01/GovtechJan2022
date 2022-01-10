@@ -3,7 +3,7 @@ To run
 2) In new cmd window -> curl localhost:8080/users or curl localhost:8080/upload
     - Use query params to pass in parameters
     - Sample command - curl "localhost:8080/users?min=0&max=0&offset=0&limit=0&sort=NAME"
-                     - curl "localhost:8080/upload?filepath=src/main/resources"
+                     - curl -X POST "localhost:8080/upload?file=src/main/resources/upload_file_1.txt"
     - Supported params:     /users  - min       - float
                                     - max       - float
                                     - offset    - int
