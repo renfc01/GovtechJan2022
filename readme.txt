@@ -1,6 +1,15 @@
 To run
-In govtech folder -> `mvn spring-boot:run`
-In new cmd window -> curl localhost:8080/users or curl localhost:8080/upload
+1) In govtech folder -> `mvn spring-boot:run`
+2) In new cmd window -> curl localhost:8080/users or curl localhost:8080/upload
+    - Use query params to pass in parameters
+    - Sample command - curl "localhost:8080/users?min=0&max=0&offset=0&limit=0&sort=NAME"
+                     - curl "localhost:8080/upload?filepath=src/main/resources"
+    - Supported params:     /users  - min       - float
+                                    - max       - float
+                                    - offset    - int
+                                    - limit     - int
+                                    - sort      - string. "NAME" or "SALARY" // ascending
+                            /upload - filepath  - string
 For unit testing
 
 
