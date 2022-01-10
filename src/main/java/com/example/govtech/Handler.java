@@ -33,7 +33,7 @@ public class Handler {
                 userList.add(curr);
             }
         }
-        System.out.println(sort);
+
         if (sort.equals(SORT_NAME)) {
             UserNameComparator userComparator = new UserNameComparator();
             userList.sort(userComparator);

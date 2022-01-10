@@ -1,3 +1,6 @@
+This is my first time writing a springboot webapp.
+I return string instead of json content type because of prettyprinting
+
 To run
 1) In govtech folder -> `mvn spring-boot:run`
 2) In new cmd window -> curl localhost:8080/users or curl localhost:8080/upload
@@ -8,10 +11,13 @@ To run
                                     - max       - float
                                     - offset    - int
                                     - limit     - int
-                                    - sort      - string. "NAME" or "SALARY" // ascending
-                            /upload - filepath  - string
-For unit testing
+                                    - sort      - string. "NAME" or "SALARY" // ascending only
+                            /upload - file  - string
 
+
+For unit testing
+Perform unit testing on each function, mainly the Handler.java functions
+Perform integration testing between /upload and /users, also testing each parameter of /user, as well as edge case of /upload, such as 0 salary, negative salary, and incorrectly formatted csv
 
 
 Background

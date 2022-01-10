@@ -24,7 +24,7 @@ public class Controller {
         String sort = params.getOrDefault("sort", "");
         JSONObject result = handler.GetUsers(min, max, offset, limit, sort);
         String resString = result.toString();
-//        System.out.println(resString);
+        System.out.println(resString);
         return resString;
     }
 
