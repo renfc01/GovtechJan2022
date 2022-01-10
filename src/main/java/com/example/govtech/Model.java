@@ -21,11 +21,6 @@ class User {
         return salary;
     }
 
-    public float updateSalary(float salary) {
-        this.salary = salary;
-        return salary;
-    }
-
     @Override
     public String toString() {
         return String.format("\"name\": \"%s\", \"salary\": %.2f", this.getName(), this.getSalary());
