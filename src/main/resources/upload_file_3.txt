@@ -1,2 +1,4 @@
 Name,InvalidSalary
-AddAlpha,invalid
+AddWrong,invalid
+AddAlpha,2500.05
+AddBeta,3000.00

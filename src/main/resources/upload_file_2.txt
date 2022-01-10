@@ -1,2 +1,4 @@
 Name,Salary,wrongCol
-AddAlpha,2500.05,incorrect
+AddWrong,2500.05,incorrect
+AddAlpha,2500.05
+AddBeta,3000.00
